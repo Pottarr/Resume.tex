@@ -1,0 +1,234 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LaTeX Template: Curriculum Vitae
+%
+% Source: http://www.howtotex.com/
+% Feel free to distribute this template, but please keep the
+% referal to HowToTeX.com.
+% Date: July 2011
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% How to use writeLaTeX: 
+%
+% You edit the source code here on the left, and the preview on the
+% right shows you the result within a few seconds.
+%
+% Bookmark this page and share the URL with your co-authors. They can
+% edit at the same time!
+%
+% You can upload figures, bibliographies, custom classes and
+% styles using the files menu.
+%
+% If you're new to LaTeX, the wikibook is a great place to start:
+% http://en.wikibooks.org/wiki/LaTeX
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[paper=a4,fontsize=12pt]{article} % KOMA-article class
+							
+\usepackage[a4paper, margin=1.75cm]{geometry}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{multicol}
+\usepackage{amsmath,amsfonts,amsthm}     % Math packages
+\usepackage{graphicx}                    % Enable pdflatex
+\usepackage[svgnames]{xcolor}            % Colors by their 'svgnames'
+\usepackage{color}
+\setlength{\columnseprule}{0.5pt}
+\def\columnseprulecolor{\color{black}}
+\usepackage{geometry}
+	\textheight=1000px                    % Saving trees ;-)
+\usepackage{url}
+
+\frenchspacing              % Better looking spacings after periods
+\pagestyle{empty}           % No pagenumbers/headers/footers
+
+%%% Custom sectioning (sectsty package)
+%%% ------------------------------------------------------------
+\usepackage{sectsty}
+
+\sectionfont{%			            % Change font of \section command
+	\usefont{OT1}{phv}{b}{n}%		% bch-b-n: CharterBT-Bold font
+	\sectionrule{0pt}{0pt}{-5pt}{3pt}}
+
+%%% Macros
+%%% ------------------------------------------------------------
+\newlength{\spacebox}
+\settowidth{\spacebox}{8888888888}    % Box to align text
+\newcommand{\sepspace}{\vspace*{1em}}           % Vertical space macro
+
+\newcommand{\MyName}[1]{ % Name
+		\hfill \Huge \usefont{OT1}{phv}{b}{n} \hfill #1
+		\par \normalsize \normalfont}
+		
+\newcommand{\MySlogan}[1]{ % Slogan (optional)
+		\large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1}
+		\par \normalsize \normalfont}
+
+\newcommand{\NewPart}[1]{\section*{\uppercase{#1}}}
+
+\newcommand{\PersonalEntry}[2]{
+		\noindent\hangindent=1em\hangafter=0 % Indentation
+		\parbox{\spacebox}{        % Box to align text
+		\textit{#1}}		       % Entry name (birth, address, etc.)
+		\hspace{1.5em} #2 \par}    % Entry value
+
+\newcommand{\SkillsEntry}[2]{      % Same as \PersonalEntry
+		\noindent\hangindent=1em\hangafter=0 % Indentation
+		\parbox{\spacebox}{        % Box to align text
+		\textit{#1}}			   % Entry name (birth, address, etc.)
+		\hspace{1.5em} #2 \par}    % Entry value	
+		
+\newcommand{\EducationEntry}[4]{
+		\noindent \textbf{#1} \hfill      % Study
+		\colorbox{Black}{\color{White}#2} \par  % Duration
+		\noindent \textit{#3} \par        % School
+		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
+		\normalsize \par}
+
+\newcommand{\WorkEntry}[4]{				  % Same as \EducationEntry
+		\noindent \textbf{#1} \hfill      % Jobname
+		\colorbox{Black}{\color{White}#2} \par  % Duration
+		\noindent \textit{#3} \par              % Company
+		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
+		\normalsize \par}
+
+%%% Begin Document
+%%% ------------------------------------------------------------
+\begin{document}
+% you can upload a photo and include it here...
+%\begin{wrapfigure}{l}{0.5\textwidth}
+%	\vspace*{-2em}
+%		\includegraphics[width=0.15\textwidth]{photo}
+%\end{wrapfigure}
+\includegraphics[width=0.3\textwidth]{./images/Pottarr.jpg}
+\MyName{Theepakorn Phayonrat}
+% \MyName{Phayonrat}
+\MySlogan{B.Eng in Software Engineering Student @ KMITL}
+
+
+%%% Personal details
+%%% ------------------------------------------------------------
+\NewPart{Personal details}{}
+
+\PersonalEntry{Address}{Bangkok, Thailand}
+\PersonalEntry{Phone}{0863930486}
+\PersonalEntry{Email}{\url{pottarrpongs@gmail.com}}
+\PersonalEntry{Language}{Thai, English}
+\PersonalEntry{Github}{\url{https://github.com/Pottarr}}
+\PersonalEntry{LinkedIn}{\url{https://www.linkedin.com/in/pottarrpongs/}}
+
+%%% Technical skills
+%%% ------------------------------------------------------------
+\NewPart{Technical skills}{}
+\end{itemize}
+\begin{multicols}{2}
+\SkillsEntry{Languages}{}
+\begin{itemize}
+\item Rust
+\item Python
+\item C/C++
+\item ARM Assembly
+\end{itemize}
+
+\columnbreak
+\SkillsEntry{Dev Tools}{}
+\begin{itemize}
+\item Neovim
+\item Git
+\item Latex
+\item Linux
+\end{itemize}
+\end{multicols}
+
+%%% Working Experiences
+%%% ------------------------------------------------------------
+\NewPart{Experiences}{}
+
+\WorkEntry{Teaching Assistant (Elementary System Programming)}{Jul/2025 - Present}{KMITL}{
+\begin{itemize}
+\item Lecturer in Pre-Session for new 1st year students during Summer 2025 \\
+    Topics:
+    \begin{itemize}
+        \item Rust Basic Syntax and Basic Rules of Ownership
+        \item Struct, Enum and Impl
+        \item Some Standard Library features
+    \end{itemize}
+\item On-Site Lab Teaching Assistant
+\item Lecturer in Final Exam Preparation Session during Semester 1/2025 \\
+    Topics:
+    \begin{itemize}
+        \item Trait
+        \item Iterator
+        \item Closure
+        \item Thread Programming
+    \end{itemize}
+\end{itemize}
+}
+
+\WorkEntry{Teaching Assistant (Computer Programming)}{Sep/2025 - Nov/2025}{KMITL}{
+\begin{itemize}
+\item On-Site Lab Teaching Assistant
+\end{itemize}
+}
+
+\newpage
+
+%%% Projects
+%%% ------------------------------------------------------------
+\NewPart{Academic and Personal Projects}{}
+
+\SkillsEntry{Academic Projects}{My best of 1st Year}
+\WorkEntry{RUSH - Rust Shell Terminal}{Aug/2024 - Nov/2024}
+{Elementary System Programming (Rust)}{
+A Terminal Shell with its own GUI written in Rust \\
+GitHub: \url{https://github.com/Pottarr/RUSH-Rust-Shell-Terminal} \\
+Summary:
+\begin{itemize}
+\item Developed a GUI-based terminal shell with POSIX-like commands.
+\item Implemented history cache, piping and redirecting into file for the shell.
+\end{itemize}
+}
+
+\SkillsEntry{Academic Projects}{My best of 2nd Year}
+\WorkEntry{8 Bit CPU Simulator}{Sep/2025 - Nov/2025}{
+Computer Architecture and Organization}{
+A 8 Bit CPU Simulation made in Hneemann's Digital \\
+GitHub: \url{https://github.com/Pottarr/8Bit-CPU} \\
+Summary:
+\begin{itemize}
+\item Built a simple CPU simulation with 5 stages of pipeline.
+\item Developed an assembler for the CPU ISA written in Python.
+\end{itemize}
+}
+
+\SkillsEntry{Personal Projects}{My favorite project currently working on}
+\WorkEntry{I ASSUME CPU}{Nov/2025 - Present}{Assembly and C}{
+Personal project to simulate a CPU in Hneemann's Digital to sequel of the 8 Bit CPU project \\
+GitHub: \url{https://github.com/Pottarr/I-ASSUME-CPU} \\
+Goals:
+\begin{itemize}
+\item To simulate a working CPU with its own set of instructions.
+\item To create a compiler and assembler for the languages (ASSUME languages) written in C.
+\end{itemize}
+
+}
+
+%%% Education
+%%% ------------------------------------------------------------
+\NewPart{Education}{}
+
+\EducationEntry{SMTP Class}{2021 - 2023}{Triam Udom Suksa Pattanakarn School}{GPA: 3.88}
+\EducationEntry{B.Eng. Software Engineering}{2024 - Present}{King Mongkut's Institute of Technology of Ladkrabang}{
+GPA: 3.02 \\
+Relevant Coursework:
+\begin{itemize}
+\item Computer Programming
+\item Elementary System Programming
+\item Computer Architecture ans Organization
+\item Data Structures and Algorithms
+\item Web Programming
+\end{itemize}
+
+}
+
+\end{document}
