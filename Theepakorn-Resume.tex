@@ -22,21 +22,20 @@
 % http://en.wikibooks.org/wiki/LaTeX
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[paper=a4,fontsize=12pt]{article} % KOMA-article class
+\documentclass[paper=a4,fontsize=10pt]{article} % KOMA-article class
 							
-\usepackage[a4paper, margin=1.5cm]{geometry}
+\usepackage[a4paper, margin=0.75cm]{geometry}
 \usepackage[english]{babel}
 \usepackage[utf8x]{inputenc}
 \usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{enumitem}
 \usepackage{multicol}
 \usepackage{amsmath,amsfonts,amsthm}     % Math packages
 \usepackage{graphicx}                    % Enable pdflatex
 \usepackage[svgnames]{xcolor}            % Colors by their 'svgnames'
 \usepackage{color}
-\setlength{\columnseprule}{0.5pt}
-\def\columnseprulecolor{\color{black}}
 \usepackage{geometry}
-	\textheight=1000px                    % Saving trees ;-)
+\textheight=1000px                    % Saving trees ;-)
 \usepackage{url}
 
 \frenchspacing              % Better looking spacings after periods
@@ -46,7 +45,7 @@
 %%% ------------------------------------------------------------
 \usepackage{sectsty}
 
-\sectionfont{%			            % Change font of \section command
+\subsectionfont{%			            % Change font of \section command
 	\usefont{OT1}{phv}{b}{n}%		% bch-b-n: CharterBT-Bold font
 	\sectionrule{0pt}{0pt}{-5pt}{3pt}}
 
@@ -64,7 +63,7 @@
 		\large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1}
 		\par \normalsize \normalfont}
 
-\newcommand{\NewPart}[1]{\section*{\uppercase{#1}}}
+\newcommand{\NewPart}[1]{\subsection*{\uppercase{#1}}}
 
 \newcommand{\PersonalEntry}[2]{
 		\noindent\hangindent=1em\hangafter=0 % Indentation
@@ -100,7 +99,7 @@
 %	\vspace*{-2em}
 %		\includegraphics[width=0.15\textwidth]{photo}
 %\end{wrapfigure}
-\includegraphics[width=0.25\textwidth]{./images/Pottarr.jpg}
+% \includegraphics[width=0.3\textwidth]{./images/Pottarr.jpg}
 \MyName{Theepakorn Phayonrat}
 % \MyName{Phayonrat}
 \MySlogan{B.Eng in Software Engineering Student @ KMITL}
@@ -110,113 +109,110 @@
 %%% ------------------------------------------------------------
 \NewPart{Personal details}{}
 
+\begin{minipage}[t]{0.4\textwidth}
 \PersonalEntry{Address}{Bangkok, Thailand}
 \PersonalEntry{Phone}{0863930486}
 \PersonalEntry{Email}{\url{pottarrpongs@gmail.com}}
+\end{minipage}
+\begin{minipage}[t]{0.6\textwidth}
 \PersonalEntry{Language}{Thai, English}
-\PersonalEntry{Github}{\url{https://github.com/Pottarr}}
+\PersonalEntry{GitHub}{\url{https://github.com/Pottarr}}
 \PersonalEntry{LinkedIn}{\url{https://www.linkedin.com/in/pottarrpongs/}}
+\end{minipage}
 
 %%% Technical skills
 %%% ------------------------------------------------------------
 \NewPart{Technical skills}{}
-\end{itemize}
-\begin{multicols}{2}
-\SkillsEntry{Languages}{}
-\begin{itemize}
-\item Rust
-\item Python
-\item C/C++
-\item ARM Assembly
-\end{itemize}
 
-\columnbreak
+\begin{minipage}[t]{0.1\textwidth}
+\SkillsEntry{Languages}{}
+\end{minipage}
+\begin{minipage}[c]{0.5\textwidth}
+    \begin{multicols}{3}
+        \begin{itemize}[nosep]
+            \item Rust
+            \item Python
+            \columnbreak
+            \item C/C++
+            \item ARM ASM
+            \columnbreak
+            \item HTML/CSS
+            \item JS/TS
+        \end{itemize}
+    \end{multicols}
+\end{minipage}
+\begin{minipage}[t]{0.1\textwidth}
 \SkillsEntry{Dev Tools}{}
-\begin{itemize}
-\item Neovim
-\item Git
-\item Latex
-\item Linux
-\end{itemize}
-\end{multicols}
+\end{minipage}
+\begin{minipage}[c]{0.3\textwidth}
+    \begin{multicols}{2}
+        \begin{itemize}[nosep]
+        \item Neovim
+        \item Git
+        \item Latex
+        \item Linux
+        \end{itemize}
+    \end{multicols}
+\end{minipage}
 
 %%% Working Experiences
 %%% ------------------------------------------------------------
 \NewPart{Experiences}{}
 
-\WorkEntry{Teaching Assistant (Elementary System Programming)}{Jul/2025 - Present}{KMITL}{
-\begin{itemize}
+\WorkEntry{Teaching Assistant (Sessions Lecturer in Elementary System Programming)}{Jul/2025 - Present}{KMITL}{
+    \begin{itemize}[nosep]
 \item Lecturer in Pre-Session for new 1st year students during Summer 2025 \\
     Topics:
-    \begin{itemize}
-        \item Rust Basic Syntax and Basic Rules of Ownership
-        \item Struct, Enum and Impl
-        \item Some Standard Library features
-    \end{itemize}
-\item On-Site Lab Teaching Assistant (Rust)
+    \begin{multicols}{2}
+        \begin{itemize}[nosep]
+            \item Rust Basic Syntax and Rules of Ownership
+            \item Struct, Enum, Impl and some Standard Library features
+        \end{itemize}
+    \end{multicols}
 \item Lecturer in Final Exam Preparation Session during Semester 1/2025 \\
     Topics:
-    \begin{itemize}
-        \item Trait
-        \item Iterator
-        \item Closure
-        \item Thread Programming
-    \end{itemize}
+    \begin{multicols}{2}
+        \begin{itemize}[nosep]
+            \item trait, iterator and closure
+            \item multi-thread programming
+        \end{itemize}
+    \end{multicols}
 \end{itemize}
 }
 
-\WorkEntry{Teaching Assistant (Computer Programming)}{Sep/2025 - Nov/2025}{KMITL}{
-\begin{itemize}
-\item On-Site Lab Teaching Assistant (Python)
+\WorkEntry{Teaching Assistant (Lab Assistant)}{Jul/2025 - Present}{KMITL}{
+\begin{itemize}[nosep]
+\item On-Site Object Oriented Programming Lab Teaching Assistant (C++) (Semester 2/2025)
+\item On-Site Computer Programming Lab Teaching Assistant (Python) (Semester 1/2025)
+\item On-Site Elementary System Programming Lab Teaching Assistant (Rust) (Semester 1/2025)
 \end{itemize}
 }
-
-\WorkEntry{Teaching Assistant (Object Oriented Programming)}{Nov/2025 - Present}{KMITL}{
-\begin{itemize}
-\item On-Site Lab Teaching Assistant (C++)
-\end{itemize}
-}
-
-\newpage
 
 %%% Projects
 %%% ------------------------------------------------------------
 \NewPart{Academic and Personal Projects}{}
 
-\SkillsEntry{Academic Projects}{My best of 1st Year}
-\WorkEntry{RUSH - Rust Shell Terminal}{Aug/2024 - Nov/2024}
-{Elementary System Programming (Rust)}{
-A Terminal Shell with its own GUI written in Rust \\
-GitHub: \url{https://github.com/Pottarr/RUSH-Rust-Shell-Terminal} \\
-Summary:
-\begin{itemize}
-\item Developed a GUI-based terminal shell with POSIX-like commands.
-\item Implemented history cache, piping and redirecting into file for the shell.
-\end{itemize}
+\SkillsEntry{Personal Project}{My favorite project currently working on}
+\WorkEntry{I ASSUME CPU}{Nov/2025 - Present}{Assembly and C}{
+Personal project, sequel Project of the 8 Bit CPU project with compiler
+and assembler for its own languages
+written in C. \\
+GitHub: \url{https://github.com/Pottarr/I-ASSUME-CPU} \\
 }
 
-\SkillsEntry{Academic Projects}{My best of 2nd Year}
+\SkillsEntry{Academic Project}{My best of 2nd Year}
 \WorkEntry{8 Bit CPU Simulator}{Sep/2025 - Nov/2025}{
 Computer Architecture and Organization}{
-A 8 Bit CPU Simulation made in Hneemann's Digital \\
+A 8 Bit CPU Simulation made in Hneemann's Digital with ISA assembler
+written in Python \\
 GitHub: \url{https://github.com/Pottarr/8Bit-CPU} \\
-Summary:
-\begin{itemize}
-\item Built a simple CPU simulation with 5 stages of pipeline.
-\item Developed an assembler for the CPU ISA written in Python.
-\end{itemize}
 }
 
-\SkillsEntry{Personal Projects}{My favorite project currently working on}
-\WorkEntry{I ASSUME CPU}{Nov/2025 - Present}{Assembly and C}{
-Personal project to simulate a CPU in Hneemann's Digital to sequel of the 8 Bit CPU project \\
-GitHub: \url{https://github.com/Pottarr/I-ASSUME-CPU} \\
-Goals:
-\begin{itemize}
-\item To simulate a working CPU with its own set of instructions.
-\item To create a compiler and assembler for the languages (ASSUME languages) written in C.
-\end{itemize}
-
+\SkillsEntry{Academic Project}{My best of 1st Year}
+\WorkEntry{RUSH - Rust Shell Terminal}{Aug/2024 - Nov/2024}
+{Elementary System Programming (Rust)}{
+A POSIX-like Terminal Shell with its own GUI written in Rust \\
+GitHub: \url{https://github.com/Pottarr/RUSH-Rust-Shell-Terminal} \\
 }
 
 %%% Education
@@ -226,14 +222,15 @@ Goals:
 \EducationEntry{B.Eng. Software Engineering}{2024 - Present}{King Mongkut's Institute of Technology of Ladkrabang}{
 GPA: 3.02 \\
 Relevant Coursework:
-\begin{itemize}
-\item Computer Programming
-\item Elementary System Programming
-\item Computer Architecture ans Organization
-\item Data Structures and Algorithms
-\item Web Programming
-\end{itemize}
+     \begin{multicols}{3}
+        \begin{itemize}[nosep]
+            \item Computer Programming
+            \item Elementary System Programming
+            \item Computer Architecture and Organization
+            \item Data Structures and Algorithms
+            \item Web Programming
+        \end{itemize}
+    \end{multicols}
 }
-\EducationEntry{SMTP Class}{2021 - 2023}{Triam Udom Suksa Pattanakarn School}{GPA: 3.88}
-
+% \EducationEntry{SMTP Class}{2021 - 2023}{Triam Udom Suksa Pattanakarn School}{GPA: 3.88}
 \end{document}

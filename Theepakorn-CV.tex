@@ -24,7 +24,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[paper=a4,fontsize=10pt]{article} % KOMA-article class
 							
-\usepackage[a4paper, margin=0.75cm]{geometry}
+\usepackage[a4paper, margin=1.5cm]{geometry}
 \usepackage[english]{babel}
 \usepackage[utf8x]{inputenc}
 \usepackage[protrusion=true,expansion=true]{microtype}
@@ -99,7 +99,7 @@
 %	\vspace*{-2em}
 %		\includegraphics[width=0.15\textwidth]{photo}
 %\end{wrapfigure}
-% \includegraphics[width=0.3\textwidth]{./images/Pottarr.jpg}
+\includegraphics[width=0.25\textwidth]{./images/Pottarr.jpg}
 \MyName{Theepakorn Phayonrat}
 % \MyName{Phayonrat}
 \MySlogan{B.Eng in Software Engineering Student @ KMITL}
@@ -173,8 +173,8 @@
     Topics:
     \begin{multicols}{2}
         \begin{itemize}[nosep]
-            \item Trait, Iterator and Closure
-            \item Multi-Thread Programming
+            \item trait, iterator and closure
+            \item multi-thread programming
         \end{itemize}
     \end{multicols}
 \end{itemize}
@@ -188,33 +188,6 @@
 \end{itemize}
 }
 
-%%% Projects
-%%% ------------------------------------------------------------
-\NewPart{Academic and Personal Projects}{}
-
-\SkillsEntry{Personal Projects}{My favorite project currently working on}
-\WorkEntry{I ASSUME CPU}{Nov/2025 - Present}{Assembly and C}{
-Personal project, sequel Project of the 8 Bit CPU project with compiler
-and assembler for its own languages
-written in C. \\
-GitHub: \url{https://github.com/Pottarr/I-ASSUME-CPU} \\
-}
-
-\SkillsEntry{Academic Projects}{My best of 2nd Year}
-\WorkEntry{8 Bit CPU Simulator}{Sep/2025 - Nov/2025}{
-Computer Architecture and Organization}{
-A 8 Bit CPU Simulation made in Hneemann's Digital with ISA assembler
-written in Python \\
-GitHub: \url{https://github.com/Pottarr/8Bit-CPU} \\
-}
-
-\SkillsEntry{Academic Projects}{My best of 1st Year}
-\WorkEntry{RUSH - Rust Shell Terminal}{Aug/2024 - Nov/2024}
-{Elementary System Programming (Rust)}{
-A POSIX-like Terminal Shell with its own GUI written in Rust \\
-GitHub: \url{https://github.com/Pottarr/RUSH-Rust-Shell-Terminal} \\
-}
-
 %%% Education
 %%% ------------------------------------------------------------
 \NewPart{Education}{}
@@ -222,13 +195,93 @@ GitHub: \url{https://github.com/Pottarr/RUSH-Rust-Shell-Terminal} \\
 \EducationEntry{B.Eng. Software Engineering}{2024 - Present}{King Mongkut's Institute of Technology of Ladkrabang}{
 GPA: 3.02 \\
 Relevant Coursework:
-    \begin{itemize}
-    \item Computer Programming
-    \item Elementary System Programming
-    \item Computer Architecture ans Organization
-    \item Data Structures and Algorithms
-    \item Web Programming
-    \end{itemize}
+     \begin{multicols}{3}
+        \begin{itemize}[nosep]
+            \item Computer Programming
+            \item Elementary System Programming
+            \item Computer Architecture and Organization
+            \item Data Structures and Algorithms
+            \item Web Programming
+        \end{itemize}
+    \end{multicols}
 }
-% \EducationEntry{SMTP Class}{2021 - 2023}{Triam Udom Suksa Pattanakarn School}{GPA: 3.88}
+\EducationEntry{SMTP Class}{2021 - 2023}{Triam Udom Suksa Pattanakarn School}{GPA: 3.88}
+
+\newpage
+
+%%% Academic Projects
+%%% ------------------------------------------------------------
+\NewPart{Academic Projects}{}
+
+\SkillsEntry{Year 2/2}{In Progress}
+\WorkEntry{PEPE: Project Elaborating Program with Extension}{Nov/2025 - Present}
+{Software Engineering Principle (Python)}{
+A project management software which can design QML and Gantt chart with
+task management system integrate with git \\
+GitHub: \url{https://github.com/Pottarr/PEPE} \\
+}
+
+\SkillsEntry{Year 2/1}{My best of 2nd Year}
+\WorkEntry{8 Bit CPU Simulator}{Sep/2025 - Nov/2025}{
+Computer Architecture and Organization}{
+A 8 Bit CPU Simulation made in Hneemann's Digital with ISA assembler
+written in Python \\
+GitHub: \url{https://github.com/Pottarr/8Bit-CPU} \\
+}
+
+\SkillsEntry{Year 2/1}{}
+\WorkEntry{SE Connect}{Sep/2025 - Nov/2025}{
+Web Programming (HTML CSS JS)}{
+Forum Website for KMITL Software Engineering Major \\
+GitHub: \url{https://github.com/Pottarr/SE-Connect} \\
+}
+
+\SkillsEntry{Year 1/2}{}
+\WorkEntry{QtGroove}{Aug/2024 - Nov/2024}
+{Object Oriented Programming (C++)}{
+A music player written in C++ with Qt framework \\
+GitHub: \url{https://github.com/Pottarr/QtGroove} \\
+}
+
+\SkillsEntry{Year 1/1}{My best of 1st Year}
+\WorkEntry{RUSH - Rust Shell Terminal}{Aug/2024 - Nov/2024}
+{Elementary System Programming (Rust)}{
+A POSIX-like Terminal Shell with its own GUI written in Rust \\
+GitHub: \url{https://github.com/Pottarr/RUSH-Rust-Shell-Terminal} \\
+}
+
+\SkillsEntry{Year 1/1}{}
+\WorkEntry{PyCalendar}{Aug/2024 - Nov/2024}
+{Computer Programming (Python)}{
+A desktop based calendar written in Python with TkInter package \\
+GitHub: \url{https://github.com/Pottarr/PyCalendar} \\
+}
+
+%%% Personal Projects
+%%% ------------------------------------------------------------
+\NewPart{Personal Projects}{}
+
+\SkillsEntry{In progress}{My favorite project currently working on}
+\WorkEntry{I ASSUME CPU}{Nov/2025 - Present}
+{Assembly and C}{
+Personal project, sequel Project of the 8 Bit CPU project with compiler
+and assembler for its own languages
+written in C. \\
+GitHub: \url{https://github.com/Pottarr/I-ASSUME-CPU} \\
+}
+
+\SkillsEntry{In progress}{}
+\WorkEntry{PLA Macros}{Dec/2025 - Present}
+{Latex}{
+A Latex macro package to simplify plotting graph for Latex \\
+GitHub: \url{https://github.com/Pottarr/PLA-Macors} \\
+}
+
+% \SkillsEntry{Academic Projects}{My best of 1st Year}
+% \WorkEntry{RUSH - Rust Shell Terminal}{Aug/2024 - Nov/2024}
+% {}{
+% A POSIX-like Terminal Shell with its own GUI written in Rust \\
+% GitHub: \url{https://github.com/Pottarr/RUSH-Rust-Shell-Terminal} \\
+% }
+%
 \end{document}
