@@ -79,14 +79,14 @@
 		
 \newcommand{\EducationEntry}[4]{
 		\noindent \textbf{#1} \hfill      % Study
-		\colorbox{Black}{\color{White}#2} \par  % Duration
+        \colorbox{Black}{\color{White}\textbf{#2}} \par  % Duration
 		\noindent \textit{#3} \par        % School
 		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
 		\normalsize \par}
 
 \newcommand{\WorkEntry}[4]{				  % Same as \EducationEntry
 		\noindent \textbf{#1} \hfill      % Jobname
-		\colorbox{Black}{\color{White}#2} \par  % Duration
+        \colorbox{Black}{\color{White}\textbf{#2}} \par  % Duration
 		\noindent \textit{#3} \par              % Company
 		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
 		\normalsize \par}
@@ -99,7 +99,7 @@
 %	\vspace*{-2em}
 %		\includegraphics[width=0.15\textwidth]{photo}
 %\end{wrapfigure}
-% \includegraphics[width=0.3\textwidth]{./images/Pottarr.jpg}
+% \includegraphics[width=0.25\textwidth]{./images/Pottarr.jpg}
 \MyName{Theepakorn Phayonrat}
 % \MyName{Phayonrat}
 \MySlogan{B.Eng in Software Engineering Student @ KMITL}
@@ -160,23 +160,23 @@
 \NewPart{Experiences}{}
 
 \WorkEntry{Teaching Assistant (Sessions Lecturer in Elementary System Programming)}{Jul/2025 - Present}{KMITL}{
-    \begin{itemize}[nosep]
-\item Lecturer in Pre-Session for new 1st year students during Summer 2025 \\
-    Topics:
-    \begin{multicols}{2}
-        \begin{itemize}[nosep]
-            \item Rust Basic Syntax and Rules of Ownership
-            \item Struct, Enum, Impl and some Standard Library features
-        \end{itemize}
-    \end{multicols}
-\item Lecturer in Final Exam Preparation Session during Semester 1/2025 \\
-    Topics:
-    \begin{multicols}{2}
-        \begin{itemize}[nosep]
-            \item trait, iterator and closure
-            \item multi-thread programming
-        \end{itemize}
-    \end{multicols}
+\begin{itemize}[nosep]
+    \item Lecturer in Pre-Session for new 1st year students during Summer 2025
+        % Topics:
+        % \begin{multicols}{2}
+        %     \begin{itemize}[nosep]
+        %         \item Rust Basic Syntax and Rules of Ownership
+        %         \item Struct, Enum, Impl and some Standard Library features
+        %     \end{itemize}
+        % \end{multicols}
+    \item Lecturer in Final Exam Preparation Session during Semester 1/2025
+        % Topics:
+        % \begin{multicols}{2}
+        %     \begin{itemize}[nosep]
+        %         \item trait, iterator and closure
+        %         \item multi-thread programming
+        %     \end{itemize}
+        % \end{multicols}
 \end{itemize}
 }
 
@@ -192,27 +192,41 @@
 %%% ------------------------------------------------------------
 \NewPart{Academic and Personal Projects}{}
 
-\SkillsEntry{Personal Project}{My favorite project currently working on}
-\WorkEntry{I ASSUME CPU}{Nov/2025 - Present}{Assembly and C}{
-Personal project, sequel Project of the 8 Bit CPU project with compiler
-and assembler for its own languages
-written in C. \\
-GitHub: \url{https://github.com/Pottarr/I-ASSUME-CPU} \\
+\SkillsEntry{Personal Projects}{My favorite projects currently working on}
+\WorkEntry{JarueK}{Aug/2025 - Present}{Rust}{
+A terminal text editor written in Rust
+% GitHub: \url{https://github.com/Pottarr/JareuK} \\
 }
 
-\SkillsEntry{Academic Project}{My best of 2nd Year}
+\WorkEntry{I ASSUME CPU}{Nov/2025 - Present}{Assembly and C}{
+A sequel project of the 8 Bit CPU project with compiler
+and assembler for its own languages written in C. \\
+% GitHub: \url{https://github.com/Pottarr/I-ASSUME-CPU} \\
+}
+
+\WorkEntry{PLA Macros}{Dec/2025 - Present}{Latex}{
+A \LaTeX\ package to simplify the plotting syntax of Linear Algebra
+in at most 3 axes \\
+% GitHub: \url{https://github.com/Pottarr/PLA-Macros} \\
+}
+
+\WorkEntry{C Plot Lib}{Dec/2025 - Present}{C}{
+A C graph plotting program with GUI powered by SDL2 and GTK \\
+% GitHub: \url{https://github.com/Pottarr/C-Plot} \\
+}
+
+\SkillsEntry{Academic Projects}{My best of each year}
 \WorkEntry{8 Bit CPU Simulator}{Sep/2025 - Nov/2025}{
-Computer Architecture and Organization}{
+Computer Architecture and Organization (Year 2)}{
 A 8 Bit CPU Simulation made in Hneemann's Digital with ISA assembler
 written in Python \\
-GitHub: \url{https://github.com/Pottarr/8Bit-CPU} \\
+% GitHub: \url{https://github.com/Pottarr/8Bit-CPU} \\
 }
 
-\SkillsEntry{Academic Project}{My best of 1st Year}
 \WorkEntry{RUSH - Rust Shell Terminal}{Aug/2024 - Nov/2024}
-{Elementary System Programming (Rust)}{
-A POSIX-like Terminal Shell with its own GUI written in Rust \\
-GitHub: \url{https://github.com/Pottarr/RUSH-Rust-Shell-Terminal} \\
+{Elementary System Programming (Rust) (Year 1)}{
+A POSIX-like Terminal Shell with its own GUI written in Rust
+% GitHub: \url{https://github.com/Pottarr/RUSH-Rust-Shell-Terminal} \\
 }
 
 %%% Education
@@ -226,9 +240,12 @@ Relevant Coursework:
         \begin{itemize}[nosep]
             \item Computer Programming
             \item Elementary System Programming
+            \item Digital System Fundamental
+            \item Object Oriented Programming
             \item Computer Architecture and Organization
             \item Data Structures and Algorithms
             \item Web Programming
+            \item Database Systems
         \end{itemize}
     \end{multicols}
 }

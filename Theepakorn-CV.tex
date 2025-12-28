@@ -24,7 +24,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[paper=a4,fontsize=10pt]{article} % KOMA-article class
 							
-\usepackage[a4paper, margin=1.5cm]{geometry}
+\usepackage[a4paper, margin=1.0cm]{geometry}
 \usepackage[english]{babel}
 \usepackage[utf8x]{inputenc}
 \usepackage[protrusion=true,expansion=true]{microtype}
@@ -79,14 +79,14 @@
 		
 \newcommand{\EducationEntry}[4]{
 		\noindent \textbf{#1} \hfill      % Study
-		\colorbox{Black}{\color{White}#2} \par  % Duration
+        \colorbox{Black}{\color{White}\textbf{#2}} \par  % Duration
 		\noindent \textit{#3} \par        % School
 		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
 		\normalsize \par}
 
 \newcommand{\WorkEntry}[4]{				  % Same as \EducationEntry
 		\noindent \textbf{#1} \hfill      % Jobname
-		\colorbox{Black}{\color{White}#2} \par  % Duration
+        \colorbox{Black}{\color{White}\textbf{#2}} \par  % Duration
 		\noindent \textit{#3} \par              % Company
 		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
 		\normalsize \par}
@@ -99,7 +99,7 @@
 %	\vspace*{-2em}
 %		\includegraphics[width=0.15\textwidth]{photo}
 %\end{wrapfigure}
-\includegraphics[width=0.25\textwidth]{./images/Pottarr.jpg}
+\noindent \includegraphics[width=0.25\textwidth]{./images/Pottarr.jpg}
 \MyName{Theepakorn Phayonrat}
 % \MyName{Phayonrat}
 \MySlogan{B.Eng in Software Engineering Student @ KMITL}
@@ -163,20 +163,20 @@
     \begin{itemize}[nosep]
 \item Lecturer in Pre-Session for new 1st year students during Summer 2025 \\
     Topics:
-    \begin{multicols}{2}
+    % \begin{multicols}{2}
         \begin{itemize}[nosep]
             \item Rust Basic Syntax and Rules of Ownership
             \item Struct, Enum, Impl and some Standard Library features
         \end{itemize}
-    \end{multicols}
+    % \end{multicols}
 \item Lecturer in Final Exam Preparation Session during Semester 1/2025 \\
     Topics:
-    \begin{multicols}{2}
+    % \begin{multicols}{2}
         \begin{itemize}[nosep]
             \item trait, iterator and closure
             \item multi-thread programming
         \end{itemize}
-    \end{multicols}
+    % \end{multicols}
 \end{itemize}
 }
 
@@ -215,10 +215,10 @@ Relevant Coursework:
 
 \SkillsEntry{Year 2/2}{In Progress}
 \WorkEntry{PEPE: Project Elaborating Program with Extension}{Nov/2025 - Present}
-{Software Engineering Principle (Python)}{
+{Software Engineering Principle (Python TS)}{
 A project management software which can design QML and Gantt chart with
-task management system integrate with git \\
-GitHub: \url{https://github.com/Pottarr/PEPE} \\
+task management system \\
+% GitHub: \url{https://github.com/Pottarr/PEPE} \\
 }
 
 \SkillsEntry{Year 2/1}{My best of 2nd Year}
@@ -226,56 +226,68 @@ GitHub: \url{https://github.com/Pottarr/PEPE} \\
 Computer Architecture and Organization}{
 A 8 Bit CPU Simulation made in Hneemann's Digital with ISA assembler
 written in Python \\
-GitHub: \url{https://github.com/Pottarr/8Bit-CPU} \\
+% GitHub: \url{https://github.com/Pottarr/8Bit-CPU} \\
 }
 
 \SkillsEntry{Year 2/1}{}
 \WorkEntry{SE Connect}{Sep/2025 - Nov/2025}{
 Web Programming (HTML CSS JS)}{
 Forum Website for KMITL Software Engineering Major \\
-GitHub: \url{https://github.com/Pottarr/SE-Connect} \\
+% GitHub: \url{https://github.com/Pottarr/SE-Connect} \\
 }
 
 \SkillsEntry{Year 1/2}{}
 \WorkEntry{QtGroove}{Aug/2024 - Nov/2024}
 {Object Oriented Programming (C++)}{
 A music player written in C++ with Qt framework \\
-GitHub: \url{https://github.com/Pottarr/QtGroove} \\
+% GitHub: \url{https://github.com/Pottarr/QtGroove} \\
 }
 
 \SkillsEntry{Year 1/1}{My best of 1st Year}
 \WorkEntry{RUSH - Rust Shell Terminal}{Aug/2024 - Nov/2024}
 {Elementary System Programming (Rust)}{
 A POSIX-like Terminal Shell with its own GUI written in Rust \\
-GitHub: \url{https://github.com/Pottarr/RUSH-Rust-Shell-Terminal} \\
+% GitHub: \url{https://github.com/Pottarr/RUSH-Rust-Shell-Terminal} \\
 }
 
 \SkillsEntry{Year 1/1}{}
 \WorkEntry{PyCalendar}{Aug/2024 - Nov/2024}
 {Computer Programming (Python)}{
 A desktop based calendar written in Python with TkInter package \\
-GitHub: \url{https://github.com/Pottarr/PyCalendar} \\
+% GitHub: \url{https://github.com/Pottarr/PyCalendar} \\
 }
 
 %%% Personal Projects
 %%% ------------------------------------------------------------
 \NewPart{Personal Projects}{}
 
-\SkillsEntry{In progress}{My favorite project currently working on}
-\WorkEntry{I ASSUME CPU}{Nov/2025 - Present}
-{Assembly and C}{
-Personal project, sequel Project of the 8 Bit CPU project with compiler
-and assembler for its own languages
-written in C. \\
-GitHub: \url{https://github.com/Pottarr/I-ASSUME-CPU} \\
+\SkillsEntry{In progress}{}
+\WorkEntry{JarueK}{Aug/2025 - Present}{Rust}{
+A terminal text editor written in Rust \\
+% GitHub: \url{https://github.com/Pottarr/JarueK} \\
 }
 
 \SkillsEntry{In progress}{}
-\WorkEntry{PLA Macros}{Dec/2025 - Present}
-{Latex}{
-A Latex macro package to simplify plotting graph for Latex \\
-GitHub: \url{https://github.com/Pottarr/PLA-Macors} \\
+\WorkEntry{I ASSUME CPU}{Nov/2025 - Present}{Assembly and C}{
+A sequel project of the 8 Bit CPU project with compiler
+and assembler for its own languages written in C. \\
+% GitHub: \url{https://github.com/Pottarr/I-ASSUME-CPU} \\
 }
+
+\SkillsEntry{In progress}{}
+\WorkEntry{PLA Macros}{Dec/2025 - Present}{Latex}{
+A \LaTeX\ package to simplify the plotting syntax of Linear Algebra
+in at most 3 axes \\
+% GitHub: \url{https://github.com/Pottarr/PLA-Macros} \\
+}
+
+
+\SkillsEntry{In progress}{}
+\WorkEntry{C Plot Lib}{Dec/2025 - Present}{C}{
+A C graph plotting program with GUI powered by SDL2 and GTK \\
+% GitHub: \url{https://github.com/Pottarr/I-ASSUME-CPU} \\
+}
+
 
 % \SkillsEntry{Academic Projects}{My best of 1st Year}
 % \WorkEntry{RUSH - Rust Shell Terminal}{Aug/2024 - Nov/2024}
